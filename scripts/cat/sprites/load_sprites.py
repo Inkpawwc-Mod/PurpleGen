@@ -393,6 +393,16 @@ class Sprites:
                             name=f"{spritesheet}{style}",
                             palettes=style_type[style],
                         )
+            elif data == self.EYE_DATA and self.EYE_DATA["palette_map"]:
+                spritesheet = self.EYE_DATA["spritesheet"]
+                for row, colour_type in enumerate(self.EYE_DATA["colour_data"]):
+                    for col, colour in enumerate(colour_type):
+                        self.make_group(
+                            spritesheet=spritesheet,
+                            pos=(col, row),
+                            name=f"{spritesheet}{colour}",
+                            palettes=colour_type[colour],
+                        )
 
             # these have multiple sprite sheets, so are handled differently from the others
             elif data in multi_sheet_data:
