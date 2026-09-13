@@ -604,7 +604,12 @@ class Pelt:
             num = 1
 
         if not random.randint(0, num):
-            colour_wheel = [Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.red_eyes]
+            colour_wheel = [
+                Pelt.yellow_eyes,
+                Pelt.blue_eyes,
+                Pelt.green_eyes,
+                Pelt.red_eyes,
+            ]
             for colour in colour_wheel[:]:
                 if self.eye_colour in colour:
                     colour_wheel.remove(
